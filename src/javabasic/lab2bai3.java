@@ -11,7 +11,7 @@ public class lab2bai3 {
 			double tiendien = sodien * 1000;
 			System.out.println("tien dien: " + tiendien);
 		} else if (sodien >= 101) {
-			double tiendien = sodien * 1500;
+			double tiendien = 100 * 1000 + (sodien - 100) * 1500;
 			System.out.println("Tien dien: " + tiendien);
 		}
 		scanner.close();

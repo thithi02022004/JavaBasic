@@ -3,6 +3,57 @@ package javabasic;
 import java.util.Scanner;
 
 public class lab2bai4 {
+	public static void bai01() {
+		System.out.println(">> LỰA CHỌN TÍNH NĂNG 1 <<");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("nhap a : ");
+		int a = scanner.nextInt();
+		System.out.println("Nhap b : ");
+		int b = scanner.nextInt();
+		if (a == 0 && b == 0) {
+			System.out.println("phuong trinh co vo so nghiem");
+		} else if (a == 0 && b != 0) {
+			System.out.println("phuong trinh vo nghiem");
+		} else {
+			int x = -b / a;
+			System.out.println("Nghiem = " + x);
+		}
+		scanner.close();
+	}
+
+	public static void bai02() {
+		System.out.println(">> LỰA CHỌN TÍNH NĂNG 2 <<");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("nhap a : ");
+		int a = scanner.nextInt();
+		System.out.println("Nhap b : ");
+		int b = scanner.nextInt();
+		if (a == 0 && b == 0) {
+			System.out.println("phuong trinh co vo so nghiem");
+		} else if (a == 0 && b != 0) {
+			System.out.println("phuong trinh vo nghiem");
+		} else {
+			int x = -b / a;
+			System.out.println("Nghiem = " + x);
+		}
+		scanner.close();
+	}
+
+	public static void bai03() {
+		System.out.println(">> LỰA CHỌN TÍNH NĂNG 3 <<");
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("nhap so dien: ");
+		int sodien = scanner.nextInt();
+		if (sodien >= 0 && sodien <= 100) {
+			double tiendien = sodien * 1000;
+			System.out.println("tien dien: " + tiendien);
+		} else if (sodien >= 101) {
+			double tiendien = 100 * 1000 + (sodien - 100) * 1500;
+			System.out.println("Tien dien: " + tiendien);
+		}
+		scanner.close();
+	}
+
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		System.out.println(">> LỰA CHỌN TÍNH NĂNG <<");
@@ -17,58 +68,15 @@ public class lab2bai4 {
 
 		switch (value) {
 		case 1: {
-			System.out.println("Giai phuong trinh bac nhat");
-			System.out.println("nhap a : ");
-			int a = scanner.nextInt();
-			System.out.println("Nhap b : ");
-			int b = scanner.nextInt();
-			if (a == 0 && b == 0) {
-				System.out.println("phuong trinh co vo so nghiem");
-			} else if (a == 0 && b != 0) {
-				System.out.println("phuong trinh vo nghiem");
-			} else {
-				int x = -b / a;
-				System.out.println("Nghiem = " + x);
-			}
+			bai01();
 			break;
 		}
 		case 2: {
-			System.out.println("Giai phuong trinh bac hai");
-			System.out.println("so 1: ");
-			int a = scanner.nextInt();
-			System.out.println("so 2: ");
-			int b = scanner.nextInt();
-			System.out.println("so 3: ");
-			int c = scanner.nextInt();
-			if (a == 0) {
-				System.out.println("phuong trinh vo nghiem");
-			} else {
-				double delta = Math.pow(b, 2) - 4 * a * c;
-				if (delta < 0) {
-					System.out.println("phuong trinh vo nghiem");
-				} else if (delta == 0) {
-					double x = -b / (a * 2);
-					System.out.println("Nghiem kep: " + x);
-				} else if (delta > 0) {
-
-					double x1 = (-b + Math.sqrt(delta)) / (2 * a);
-					double x2 = (-b - Math.sqrt(delta)) / (2 * a);
-					System.out.println("co 2 nghiem rieng biet: " + x1 + " va " + x2);
-				}
-			}
+			bai02();
 			break;
 		}
 		case 3: {
-			System.out.println("Tinh tien dien");
-			System.out.println("nhap so dien: ");
-			int sodien = scanner.nextInt();
-			if (sodien >= 0 && sodien <= 100) {
-				double tiendien = sodien * 1000;
-				System.out.println("tien dien: " + tiendien);
-			} else if (sodien >= 101) {
-				double tiendien = sodien * 1500;
-				System.out.println("Tien dien: " + tiendien);
-			}
+			bai03();
 			break;
 		}
 		default:
